@@ -2,7 +2,7 @@ module.exports = {
   siteTitle: "WWBTC | GatsbyJS Demo", // <title>
   shortSiteTitle: "A GatsbyJS / SVG Image Loading Demo", // <title> ending for posts and pages
   siteDescription: "HeroBlog is a GatsbyJS starter.",
-  siteUrl: "",
+  siteUrl: "https://wwc-gatsby.surge.sh",
   // pathPrefix: "",
   siteImage: "preview.jpg",
   siteLanguage: "en",
