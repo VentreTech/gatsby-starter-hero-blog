@@ -21,8 +21,8 @@ const Hero = props => {
       <style jsx>{`
         .hero {
           align-items: center;
-          background: ${theme.hero.background};
-          background-image: url(${backgrounds.mobile});
+          // background: ${theme.hero.background};
+          // background-image: url(${backgrounds.mobile});
           background-size: cover;
           color: ${theme.text.color.primary.inverse};
           display: flex;
