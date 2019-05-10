@@ -22,7 +22,7 @@ const Hero = props => {
         .hero {
           align-items: center;
           background: ${theme.hero.background};
-          background-image: url(${backgrounds.mobile});
+          background-image: url(${backgrounds.mobile.src}), url("${backgrounds.mobile.tracedSVG}");
           background-size: cover;
           color: ${theme.text.color.primary.inverse};
           display: flex;
@@ -100,7 +100,7 @@ const Hero = props => {
 
         @from-width tablet {
           .hero {
-            background-image: url(${backgrounds.tablet});
+            background-image: url(${backgrounds.tablet.src}), url("${backgrounds.tablet.tracedSVG}");
           }
 
           h1 {
@@ -115,7 +115,7 @@ const Hero = props => {
 
         @from-width desktop {
           .hero {
-            background-image: url(${backgrounds.desktop});
+            background-image: url(${backgrounds.desktop.src}), url("${backgrounds.desktop.tracedSVG}");
           }
 
           h1 {

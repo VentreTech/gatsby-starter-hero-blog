@@ -18,13 +18,13 @@ class IndexPage extends React.Component {
       data: {
         posts: { edges: posts = [] },
         bgDesktop: {
-          resize: { src: desktop }
+          resize: desktop
         },
         bgTablet: {
-          resize: { src: tablet }
+          resize: tablet
         },
         bgMobile: {
-          resize: { src: mobile }
+          resize: mobile
         },
         site: {
           siteMetadata: { facebook }
@@ -93,7 +93,7 @@ export const query = graphql`
               children {
                 ... on ImageSharp {
                   fluid(maxWidth: 800, maxHeight: 360) {
-                    ...GatsbyImageSharpFluid_withWebp
+                    ...GatsbyImageSharpFluid_tracedSVG
                   }
                 }
               }
@@ -111,16 +111,19 @@ export const query = graphql`
     }
     bgDesktop: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
       resize(width: 1200, quality: 90, cropFocus: CENTER) {
+        tracedSVG
         src
       }
     }
     bgTablet: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
       resize(width: 800, height: 1100, quality: 90, cropFocus: CENTER) {
+        tracedSVG
         src
       }
     }
     bgMobile: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
       resize(width: 450, height: 850, quality: 90, cropFocus: CENTER) {
+        tracedSVG
         src
       }
     }
