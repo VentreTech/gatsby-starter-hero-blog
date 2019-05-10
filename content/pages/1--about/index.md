@@ -2,7 +2,7 @@
 title: About
 ---
 
-This is a demo site of the [HeroBlog](https://github.com/greglobinski/gatsby-starter-hero-blog), a [GatsbyJS](https://www.gatsbyjs.org/) starter.
+This is a [GatsbyJS](https://www.gatsbyjs.org/) demo site
 
 ### Features:
 
