@@ -109,16 +109,6 @@ export const query = graphql`
         }
       }
     }
-    imageSharp {
-    # i.e. the max width of your container is 700 pixels.
-    #
-    # Other options include maxHeight (set both maxWidth and maxHeight to crop),
-    # grayscale, duotone, rotate, etc.
-    fluid(maxWidth: 700) {
-      # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-      ...GatsbyImageSharpFluid_noBase64
-    }
-  }
     bgDesktop: imageSharp(fluid: { originalName: { regex: "/hero-background/" }, ...GatsbyImageSharpFluid_tracedSVG }) 
     bgTablet: imageSharp(fluid: { originalName: { regex: "/hero-background/" }, ...GatsbyImageSharpFluid_tracedSVG }) 
     bgMobile: imageSharp(fluid: { originalName: { regex: "/hero-background/" }, ...GatsbyImageSharpFluid_tracedSVG  })
