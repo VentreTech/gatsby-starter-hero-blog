@@ -1,5 +1,5 @@
 ---
-title: How to use big data to make your business run better.
+title: How to use big data to make your business run better
 category: "big data"
 cover: art-big-data.jpg
 author: wwbtc

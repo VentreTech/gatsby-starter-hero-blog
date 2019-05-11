@@ -1,5 +1,5 @@
 ---
-title: Using the right metrics to win.
+title: Using the right metrics to win
 category: "Analytics"
 cover: analysis-chart.jpg
 author: wwbtc

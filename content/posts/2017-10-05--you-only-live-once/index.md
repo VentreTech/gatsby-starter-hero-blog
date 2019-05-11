@@ -1,7 +1,7 @@
 ---
 title: Managing your business technology
 category: "IT"
-cover: analysis-chart.jpg
+cover: airport-center-computing.jpg
 author: wwbtc
 ---
 
@@ -11,7 +11,7 @@ Fusce a metus eu diam varius congue nec nec sapien. Nunc convallis accumsan just
 
 Praesent accumsan odio in ante ullamcorper id pellentesque mauris rhoncus. Duis vitae neque dolor. Duis sed purus at eros bibendum cursus nec a nulla. Donec turpis quam, ultricies id pretium sit amet, gravida eget leo.
 
-![A chart](./analysis-chart.jpg)
+![A chart](./airport-center-computing.jpg)
 
 The Big Oxmox advised her not to do so, because there were thousands of
 bad Commas, wild Question Marks and devious Semikoli, but the Little
