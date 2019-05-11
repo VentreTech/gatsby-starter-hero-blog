@@ -21,8 +21,8 @@ const Hero = props => {
       <style jsx>{`
         .hero {
           align-items: center;
-          // background: ${theme.hero.background};
-          // background-image: url(${backgrounds.mobile});
+          background: ${theme.hero.background};
+          background-image: url(${backgrounds.mobile.src}), url("${backgrounds.mobile.tracedSVG}");
           background-size: cover;
           color: ${theme.text.color.primary.inverse};
           display: flex;
@@ -60,7 +60,7 @@ const Hero = props => {
         }
 
         button {
-          background: ${theme.background.color.brand};
+          background: white;
           border: 0;
           border-radius: 50%;
           font-size: ${theme.font.size.m};
@@ -77,9 +77,9 @@ const Hero = props => {
           :global(svg) {
             position: relative;
             top: 5px;
-            fill: ${theme.color.neutral.white};
+            fill: black;
             stroke-width: 40;
-            stroke: ${theme.color.neutral.white};
+            stroke: black;
             animation-duration: ${theme.time.duration.long};
             animation-name: buttonIconMove;
             animation-iteration-count: infinite;
@@ -100,7 +100,7 @@ const Hero = props => {
 
         @from-width tablet {
           .hero {
-            background-image: url(${backgrounds.tablet});
+            background-image: url(${backgrounds.tablet.src}), url("${backgrounds.tablet.tracedSVG}");
           }
 
           h1 {
@@ -115,7 +115,7 @@ const Hero = props => {
 
         @from-width desktop {
           .hero {
-            background-image: url(${backgrounds.desktop});
+            background-image: url(${backgrounds.desktop.src}), url("${backgrounds.desktop.tracedSVG}");
           }
 
           h1 {
