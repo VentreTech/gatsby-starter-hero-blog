@@ -140,10 +140,11 @@ const Hero = props => {
 
   return (
     <React.Fragment>
-      <BackgroundImage
+        <BackgroundImage
             tag="section"
             className="hero"
             fluid={fluid}
+            style={{height: '100vh'}}
         >
             <h1>
                 This is a demo site for <strong>GatsbyJS</strong>
@@ -156,22 +157,20 @@ const Hero = props => {
       {/* --- STYLES --- */}
       <style jsx>{`
         .hero {
-          align-items: center;
-          background: ${theme.hero.background};
-          background-image: url(${backgrounds.mobile.src}), url("${backgrounds.mobile.tracedSVG}");
           background-size: cover;
           color: ${theme.text.color.primary.inverse};
-          display: flex;
-          flex-flow: column nowrap;
-          justify-content: center;
-          min-height: 100vh;
-          height: 100px;
           padding: ${theme.space.inset.l};
           padding-top: ${theme.header.height.homepage};
         }
 
         h1 {
           text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          margin: auto;
+          margin-top: 40vh;
           font-size: ${theme.hero.h1.size};
           margin: ${theme.space.stack.l};
           color: ${theme.hero.h1.color};
@@ -197,6 +196,10 @@ const Hero = props => {
 
         button {
           background: ${theme.background.color.brand};
+          position: absolute;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
           border: 0;
           border-radius: 50%;
           font-size: ${theme.font.size.m};
@@ -250,10 +253,6 @@ const Hero = props => {
         }
 
         @from-width desktop {
-          .hero {
-            background-image: url(${backgrounds.desktop.src}), url("${backgrounds.desktop.tracedSVG}");
-          }
-
           h1 {
             max-width: 80%;
             font-size: ${`calc(${theme.hero.h1.size} * 1.5)`};
