@@ -110,7 +110,7 @@ export const query = graphql`
     bgDesktop: file(relativePath: {eq: "jpg/hero-background.jpg"}) {
         childImageSharp {
             fluid(quality: 90, maxWidth: 4160) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_tracedSVG
             }
         }
     }
