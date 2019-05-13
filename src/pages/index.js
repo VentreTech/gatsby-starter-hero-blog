@@ -17,9 +17,7 @@ class IndexPage extends React.Component {
     const {
       data: {
         posts: { edges: posts = [] },
-        bgDesktop: {
-          resize: desktop
-        },
+        bgDesktop,
         bgTablet: {
           resize: tablet
         },
@@ -33,7 +31,7 @@ class IndexPage extends React.Component {
     } = this.props;
 
     const backgrounds = {
-      desktop,
+      bgDesktop,
       tablet,
       mobile
     };
@@ -109,11 +107,12 @@ export const query = graphql`
         }
       }
     }
-    bgDesktop: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
-      resize(width: 1200, quality: 90, cropFocus: CENTER) {
-        tracedSVG
-        src
-      }
+    bgDesktop: file(relativePath: {eq: "jpg/hero-background.jpg"}) {
+        childImageSharp {
+            fluid(quality: 90, maxWidth: 4160) {
+                ...GatsbyImageSharpFluid_withWebp
+            }
+        }
     }
     bgTablet: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
       resize(width: 800, height: 1100, quality: 90, cropFocus: CENTER) {
